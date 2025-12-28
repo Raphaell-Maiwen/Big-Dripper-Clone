@@ -39824,8 +39824,8 @@ MonoBehaviour:
   - {fileID: 747746636}
   - {fileID: 1394194721}
   _honeyDropsPoolAnchor: {fileID: 1790048749}
-  minimumIntervalTime: 1
-  maximumIntervalTime: 3
+  minimumIntervalTime: 0.5
+  maximumIntervalTime: 2
 --- !u!1 &2060054819
 GameObject:
   m_ObjectHideFlags: 0

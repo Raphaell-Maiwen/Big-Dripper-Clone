@@ -5,6 +5,8 @@ using System.Linq;
 
 public class HoneyManager : MonoBehaviour
 {
+    public static HoneyManager Instance { get; private set; }
+
     [SerializeField] private Honeycomb[] _honeycombs;
     [SerializeField] private HoneyPuddle[] _honeyPuddles;
     [SerializeField] private List<HoneyDrop> _honeyDrops;
@@ -14,13 +16,20 @@ public class HoneyManager : MonoBehaviour
     [SerializeField] private float minimumIntervalTime;
     [SerializeField] private float maximumIntervalTime;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else 
+        { 
+            Destroy(gameObject);
+        }
+    }
+
     public void Start() 
     {
-        foreach (var puddle in _honeyPuddles)
-        {
-            puddle.Init(this);
-        }
-
         StartCoroutine(SpawnHoneyCoroutine(0f));
     }
 
