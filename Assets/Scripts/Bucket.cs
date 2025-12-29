@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bucket : MonoBehaviour
 {
+    public UnityEvent OnHoneyCollected;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out HoneyDrop honeyDrop)) 
         {
             HoneyManager.Instance.PutDropBackInQueue(honeyDrop);
-            //Something for the score here
+            OnHoneyCollected?.Invoke();
         }
     }
 }

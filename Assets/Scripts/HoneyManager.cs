@@ -36,7 +36,6 @@ public class HoneyManager : MonoBehaviour
     IEnumerator SpawnHoneyCoroutine(float time) 
     {
         yield return new WaitForSeconds(time);
-        Debug.Log(time);
 
         SpawnHoneyDrop();
         StartCoroutine(SpawnHoneyCoroutine(Random.Range(minimumIntervalTime, maximumIntervalTime)));
@@ -54,13 +53,13 @@ public class HoneyManager : MonoBehaviour
 
         honeyDrop.transform.position = honeycomb.transform.position;
         _honeyDrops.RemoveAt(0);
-        honeyDrop.StartGravity();
+        honeyDrop.Spawn(honeycomb);
     }
 
     public void PutDropBackInQueue(HoneyDrop honeyDrop) 
     {
         _honeyDrops.Add(honeyDrop);
         honeyDrop.gameObject.transform.position = _honeyDropsPoolAnchor.transform.position;
-        honeyDrop.StopGravity();
+        honeyDrop.UnSpawn();
     }
 }
