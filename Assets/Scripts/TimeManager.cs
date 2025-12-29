@@ -35,5 +35,6 @@ public class TimeManager : MonoBehaviour
     {
         Debug.Log("Game Over");
         Time.timeScale = 0;
+        enabled = false;
     }
 }

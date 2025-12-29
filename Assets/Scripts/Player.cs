@@ -1,3 +1,4 @@
+using TMPro;
 using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,6 +14,14 @@ public class Player : MonoBehaviour
 
     private Vector2 movementInput = Vector2.zero;
     private int _score = 0;
+    private TextMeshProUGUI _scoreLabel;
+    private int _index;
+
+    public void Init(TextMeshProUGUI scoreLabel, int index)
+    {
+        _scoreLabel = scoreLabel;
+        _index = index;
+    }
 
     private void Start()
     {
@@ -42,6 +51,6 @@ public class Player : MonoBehaviour
     public void CollectedHoney() 
     {
         _score++;
-        Debug.Log("Score " + _score);
+        _scoreLabel.text = "P" + _index + ": " + _score;
     }
 }
