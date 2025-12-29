@@ -53,4 +53,14 @@ public class Player : MonoBehaviour
         _score++;
         _scoreLabel.text = "P" + _index + ": " + _score;
     }
+
+    public int GetScore() 
+    {
+        return _score;
+    }
+
+    public int GetIndex()
+    {
+        return _index;
+    }
 }

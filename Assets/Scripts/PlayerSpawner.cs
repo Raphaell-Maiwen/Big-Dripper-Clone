@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    [SerializeField] private TimeManager _timeManager;
     [SerializeField] private TextMeshProUGUI[] _playerScoreLabels;
     public void OnPlayerJoined(PlayerInput playerInput)
     {
@@ -14,6 +15,8 @@ public class PlayerSpawner : MonoBehaviour
         label.text = "P" + playerInput.playerIndex + ": " + 0;
 
         //Cleaner: make a dictionary in a UI Manager
-        playerInput.GetComponent<Player>().Init(label, playerInput.playerIndex + 1);
+        var player = playerInput.GetComponent<Player>();
+        player.Init(label, playerInput.playerIndex + 1);
+        _timeManager._players.Add(player);
     }
 }
