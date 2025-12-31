@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public class HoneyDrop : MonoBehaviour
+public class HoneyDrop : NetworkBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
     private Honeycomb _honeycombSpawnedFrom;

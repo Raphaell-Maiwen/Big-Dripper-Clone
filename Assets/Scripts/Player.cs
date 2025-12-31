@@ -1,9 +1,9 @@
+using Mirror;
 using TMPro;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
 
     private Vector2 movementInput = Vector2.zero;
+
+    [SyncVar(hook = nameof(OnScoreChanged))]
     private int _score = 0;
     private TextMeshProUGUI _scoreLabel;
     private int _index;
@@ -36,21 +38,28 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementInput.x, 0, movementInput.y).normalized;
-        if (movement.magnitude >= 0.1f)
+        if (isLocalPlayer) 
         {
-            _rb.velocity = new Vector3(movement.x * _speed, _rb.velocity.y, movement.z * _speed);
-            transform.rotation = Quaternion.Slerp(_rb.rotation, Quaternion.LookRotation(movement), Time.fixedDeltaTime * _rotationSpeed);
-        }
-        else 
-        {
-            _rb.velocity = new Vector3(0, _rb.velocity.y, 0);
+            Vector3 movement = new Vector3(movementInput.x, 0, movementInput.y).normalized;
+            if (movement.magnitude >= 0.1f)
+            {
+                _rb.velocity = new Vector3(movement.x * _speed, _rb.velocity.y, movement.z * _speed);
+                transform.rotation = Quaternion.Slerp(_rb.rotation, Quaternion.LookRotation(movement), Time.fixedDeltaTime * _rotationSpeed);
+            }
+            else
+            {
+                _rb.velocity = new Vector3(0, _rb.velocity.y, 0);
+            }
         }
     }
 
     public void CollectedHoney() 
     {
         _score++;
+    }
+
+    void OnScoreChanged(int oldValue, int newValue) 
+    {
         _scoreLabel.text = "P" + _index + ": " + _score;
     }
 

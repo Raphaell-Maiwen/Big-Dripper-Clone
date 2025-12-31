@@ -1,13 +1,17 @@
+using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour
+public class TimeManager : NetworkBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timeLabel;
     [SerializeField] private TextMeshProUGUI _winnerLabel;
     [SerializeField] private float _matchTime;
+
+    [SyncVar(hook = nameof(OnTimeChanged))]
     private float _countDown;
 
     public List<Player> _players = new List<Player>();
@@ -20,13 +24,20 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        _countDown -= Time.deltaTime;
-        UpdateLabel();
-
-        if ((int)_countDown <= 0) 
+        if (isServer) 
         {
-            EndOfGame();
+            _countDown -= Time.deltaTime;
+
+            if ((int)_countDown <= 0)
+            {
+                EndOfGame();
+            }
         }
+    }
+
+    void OnTimeChanged(float oldValue, float newValue)
+    {
+        UpdateLabel();
     }
 
     void UpdateLabel() 
