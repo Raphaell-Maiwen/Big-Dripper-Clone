@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class NetworkManagerBigDripper : NetworkManager
 {
-    //Use spawnPrefabs for the animals
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private List<GameObject> _availableAnimals;
     private int _index;
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        GameObject player = Instantiate(playerPrefab, _spawnPoints[_index].position, _spawnPoints[_index].rotation);
+        int animalIndex = Random.Range(0, spawnPrefabs.Count);
+        GameObject animal = _availableAnimals[animalIndex];
+        _availableAnimals.RemoveAt(animalIndex);
+
+        GameObject player = Instantiate(animal, _spawnPoints[_index].position, _spawnPoints[_index].rotation);
         NetworkServer.AddPlayerForConnection(conn, player);
 
         _index++;

@@ -27,7 +27,7 @@ public class Player : NetworkBehaviour
 
     private void Start()
     {
-        _bucket.gameObject.transform.SetParent(_animal.transform, false);
+        //_bucket.gameObject.transform.SetParent(_animal.transform, false);
         _bucket.OnHoneyCollected.AddListener(CollectedHoney);
     }
 
