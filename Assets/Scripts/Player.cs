@@ -53,6 +53,8 @@ public class Player : NetworkBehaviour
         }
     }
 
+    //Maybe it's being called from both players??
+    [Command(requiresAuthority = false)]
     public void CollectedHoney() 
     {
         _score++;

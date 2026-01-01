@@ -45,6 +45,7 @@ public class TimeManager : NetworkBehaviour
         _timeLabel.text = ((int)_countDown).ToString();
     }
 
+    [ClientRpc]
     void EndOfGame() 
     {
         Time.timeScale = 0;
@@ -72,5 +73,10 @@ public class TimeManager : NetworkBehaviour
         {
             _winnerLabel.text = "Player " + bestPlayer + " wins!";
         }
+    }
+
+    private void OnServerInitialized()
+    {
+        _winnerLabel.gameObject.SetActive(false);
     }
 }
