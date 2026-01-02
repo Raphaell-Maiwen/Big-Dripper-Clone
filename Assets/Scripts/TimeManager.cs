@@ -14,12 +14,30 @@ public class TimeManager : NetworkBehaviour
     [SyncVar(hook = nameof(OnTimeChanged))]
     private float _countDown;
 
+    [SyncVar(hook = nameof(OnGameStarted))]
+    private bool _gameStarted;
+
     public List<Player> _players = new List<Player>();
 
     private void Awake()
     {
         _countDown = _matchTime;
         UpdateLabel();
+    }
+
+    private void OnGameStarted(bool oldValue, bool newValue)
+    {
+        if(newValue)
+        {
+            _timeLabel.gameObject.SetActive(true);
+        }
+    }
+
+    [Server]
+    public void StartGame()
+    {
+        _gameStarted = true;
+        enabled = true;
     }
 
     private void Update()

@@ -7,6 +7,8 @@ public class NetworkManagerBigDripper : NetworkManager
 {
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private List<GameObject> _availableAnimals;
+    [SerializeField] private TimeManager _timeManager;
+    [SerializeField] private HoneyManager _honeyManager;
     private int _index;
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
@@ -19,5 +21,10 @@ public class NetworkManagerBigDripper : NetworkManager
         NetworkServer.AddPlayerForConnection(conn, player);
 
         _index++;
+        if (_index > 1)
+        {
+            _timeManager.StartGame();
+            _honeyManager.enabled = true;
+        }
     }
 }

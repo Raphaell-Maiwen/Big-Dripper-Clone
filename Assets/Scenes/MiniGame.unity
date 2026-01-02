@@ -12024,7 +12024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &658504794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12091,8 +12091,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 58.5
+  m_fontSizeBase: 58.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12875,8 +12875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 99.8, y: -11}
-  m_SizeDelta: {x: 195.5, y: 21.9}
+  m_AnchoredPosition: {x: 30, y: -101.649994}
+  m_SizeDelta: {x: 195.5, y: 34.1}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &683622871
 MonoBehaviour:
@@ -12925,7 +12925,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.6
+  m_fontSize: 30.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13254,8 +13254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -11}
-  m_SizeDelta: {x: 195.5, y: 21.9}
+  m_AnchoredPosition: {x: -120, y: -101.65}
+  m_SizeDelta: {x: 195.5, y: 34.1}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &693159170
 MonoBehaviour:
@@ -13304,7 +13304,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.6
+  m_fontSize: 30.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -21339,8 +21339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.3, y: -11}
-  m_SizeDelta: {x: 195.5, y: 21.9}
+  m_AnchoredPosition: {x: 100, y: -101.649994}
+  m_SizeDelta: {x: 195.5, y: 34.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1070559899
 MonoBehaviour:
@@ -21389,7 +21389,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.6
+  m_fontSize: 30.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -28263,8 +28263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 149.69, y: -11}
-  m_SizeDelta: {x: 195.5, y: 21.9}
+  m_AnchoredPosition: {x: 250, y: -101.65}
+  m_SizeDelta: {x: 195.5, y: 34.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1423701626
 MonoBehaviour:
@@ -28313,7 +28313,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.6
+  m_fontSize: 30.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -38215,6 +38215,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908417118}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1914763663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914763666}
+  - component: {fileID: 1914763665}
+  - component: {fileID: 1914763664}
+  m_Layer: 0
+  m_Name: HoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1914763664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914763663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2518052435
+  _assetId: 0
+  serverOnly: 1
+  visibility: 0
+  hasSpawned: 0
+--- !u!114 &1914763665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914763663}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad405a3c6ed1e214bb64cbadaab8570a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  _honeycombs:
+  - {fileID: 2037788805}
+  - {fileID: 1965629781}
+  - {fileID: 1137958542}
+  - {fileID: 1583017180}
+  - {fileID: 310923586}
+  - {fileID: 956315380}
+  _honeyPuddles:
+  - {fileID: 627676473}
+  - {fileID: 21320610}
+  - {fileID: 508381864}
+  - {fileID: 1793516728}
+  - {fileID: 996273470}
+  - {fileID: 1352612860}
+  _honeyDrops:
+  - {fileID: 1359246035}
+  - {fileID: 88496300}
+  - {fileID: 173938302}
+  - {fileID: 962835331}
+  - {fileID: 788211190}
+  - {fileID: 538308679}
+  - {fileID: 1496138879}
+  - {fileID: 1122675896}
+  - {fileID: 1877746052}
+  - {fileID: 1316415205}
+  - {fileID: 1354329260}
+  - {fileID: 686865252}
+  - {fileID: 747746636}
+  - {fileID: 1394194721}
+  _honeyDropsPoolAnchor: {fileID: 1790048749}
+  minimumIntervalTime: 0.5
+  maximumIntervalTime: 2
+--- !u!4 &1914763666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914763663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7110636, y: 5.0608206, z: -15.289524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917206624
 GameObject:
   m_ObjectHideFlags: 0
@@ -41014,6 +41111,8 @@ MonoBehaviour:
   - {fileID: 21388296549658770, guid: 54651de88ab190d4492e9b0f2500aafd, type: 3}
   - {fileID: 21388296549658770, guid: 264671d6b971eaf4eb87bdedbe61248a, type: 3}
   - {fileID: 21388296549658770, guid: 1d65795b4722b1c4bbbd792289361901, type: 3}
+  _timeManager: {fileID: 2058098266}
+  _honeyManager: {fileID: 1914763665}
 --- !u!1 &2047334039
 GameObject:
   m_ObjectHideFlags: 0
@@ -41289,11 +41388,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058098264}
-  - component: {fileID: 2058098265}
   - component: {fileID: 2058098266}
   - component: {fileID: 2058098267}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: TimeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41314,50 +41412,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2058098265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058098263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad405a3c6ed1e214bb64cbadaab8570a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _honeycombs:
-  - {fileID: 2037788805}
-  - {fileID: 1965629781}
-  - {fileID: 1137958542}
-  - {fileID: 1583017180}
-  - {fileID: 310923586}
-  - {fileID: 956315380}
-  _honeyPuddles:
-  - {fileID: 627676473}
-  - {fileID: 21320610}
-  - {fileID: 508381864}
-  - {fileID: 1793516728}
-  - {fileID: 996273470}
-  - {fileID: 1352612860}
-  _honeyDrops:
-  - {fileID: 1359246035}
-  - {fileID: 88496300}
-  - {fileID: 173938302}
-  - {fileID: 962835331}
-  - {fileID: 788211190}
-  - {fileID: 538308679}
-  - {fileID: 1496138879}
-  - {fileID: 1122675896}
-  - {fileID: 1877746052}
-  - {fileID: 1316415205}
-  - {fileID: 1354329260}
-  - {fileID: 686865252}
-  - {fileID: 747746636}
-  - {fileID: 1394194721}
-  _honeyDropsPoolAnchor: {fileID: 1790048749}
-  minimumIntervalTime: 0.5
-  maximumIntervalTime: 2
 --- !u!114 &2058098266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41365,7 +41419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058098263}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a82615292b8f874f9ff025813675cf1, type: 3}
   m_Name: 
@@ -43580,6 +43634,7 @@ SceneRoots:
   - {fileID: 1853769357}
   - {fileID: 1132368815}
   - {fileID: 2058098264}
+  - {fileID: 1914763666}
   - {fileID: 1790048749}
   - {fileID: 2042004589}
   - {fileID: 1513661294}

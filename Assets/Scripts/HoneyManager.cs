@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Mirror;
 
-public class HoneyManager : MonoBehaviour
+public class HoneyManager : NetworkBehaviour
 {
     public static HoneyManager Instance { get; private set; }
 

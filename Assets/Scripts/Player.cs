@@ -23,6 +23,7 @@ public class Player : NetworkBehaviour
     {
         _scoreLabel = scoreLabel;
         _index = index;
+        OnScoreChanged(0, 0);
     }
 
     private void Start()
